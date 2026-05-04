@@ -6,18 +6,21 @@ plugins {
 }
 
 android {
-    namespace = "com.example.app"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    compileSdk = 34
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+    defaultConfig {
+        applicationId = "your.app.id"
+        minSdk = 21
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
     }
 
-   kotlin {
-    compilerOptions {
-        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+    buildTypes {
+        release {
+            isMinifyEnabled = false
+            isShrinkResources = false
+        }
     }
 }
     defaultConfig {
