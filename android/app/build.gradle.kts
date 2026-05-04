@@ -38,6 +38,8 @@ android {
         }
     }
 }
+minifyEnabled false
+
 
 flutter {
     source = "../.."
